@@ -165,6 +165,10 @@ const startServer = async () => {
         app.use('/api/files', require('./routes/files'));
         app.use('/api/podcast', require('./routes/podcast'));
         app.use('/api/mindmap', require('./routes/mindmap'));
+        
+        // Advanced Features Routes
+        app.use('/api/advanced', require('./routes/advancedFeatures'));
+        app.use('/api/student', require('./routes/studentFeatures'));
 
         // Error handling middleware (last)
         app.use((err, req, res, next) => {
